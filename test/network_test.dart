@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:newsapp_flutter/Model/news_response.dart';
 import 'package:newsapp_flutter/Network/netclient.dart';
-import 'package:newsapp_flutter/Response/news_response.dart';
 
 void main() {
   group('Network Test', () {

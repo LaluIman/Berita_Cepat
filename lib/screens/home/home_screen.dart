@@ -2,8 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapp_flutter/Model/news.dart';
 import 'package:newsapp_flutter/Network/netclient.dart';
-import 'package:newsapp_flutter/Response/news_response.dart';
-import 'package:newsapp_flutter/widgets/bottom_nav.dart';
+import 'package:newsapp_flutter/Model/news_response.dart';
 import 'package:newsapp_flutter/widgets/skeleton_item.dart';
 import 'package:newsapp_flutter/screens/detail/detail_screen.dart';
 
@@ -36,25 +35,30 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Image.asset(
               "assets/BeritacepatFAV.png",
-              width: 45,
-              height: 45,
+              width: 40,
+              height: 40,
             ),
             Text(
               "Berita cepat",
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 23,
                 fontWeight: FontWeight.w800,
               ),
             ),
           ],
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 10),
+          Container(
+            margin: EdgeInsets.only(right: 10),
+            height: 40,
+            decoration: BoxDecoration(
+              color: Colors.grey.shade100,
+              borderRadius: BorderRadius.circular(10)
+            ),
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               decoration: BoxDecoration(
-                  border: Border.all(width: 1, color: Colors.grey),
+                        
                   borderRadius: BorderRadius.circular(15)),
               child: DropdownButtonHideUnderline(
                 child: SizedBox(
@@ -66,6 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       size: 25,
                     ),
                     value: _selectedNews,
+                    dropdownColor: Colors.white,
                     hint: Text(_selectedNews ?? 'Select News'),
                     items: _newsList.map((String news) {
                       return DropdownMenuItem<String>(
@@ -126,7 +131,6 @@ class _HomeScreenState extends State<HomeScreen> {
           }
         },
       ),
-      bottomNavigationBar: BottomNav(),
     );
   }
 }

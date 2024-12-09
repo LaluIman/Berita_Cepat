@@ -5,7 +5,7 @@ import 'package:newsapp_flutter/screens/splash_screen.dart';
 
 void main() {
   runApp(DevicePreview(
-    enabled: true,
+    enabled: false,
     defaultDevice: Devices.ios.iPhone13ProMax,
     devices: [Devices.ios.iPhone13ProMax],
     builder: (context) =>  const MainApp()

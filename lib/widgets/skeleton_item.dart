@@ -41,12 +41,12 @@ class SkeletonItemView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          width: 150,
+                          width: 50,
                           height: 10,
                           color: Colors.grey.shade50,
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 10,
                         ),
                         Container(
                           width: 240,
@@ -54,7 +54,7 @@ class SkeletonItemView extends StatelessWidget {
                           color: Colors.grey.shade300,
                         ),
                         SizedBox(
-                          height: 2,
+                          height: 5,
                         ),
                         Container(
                           width: 220,
@@ -62,10 +62,10 @@ class SkeletonItemView extends StatelessWidget {
                           color: Colors.grey.shade300,
                         ),
                         SizedBox(
-                          height: 15,
+                          height: 25,
                         ),
                         Container(
-                          width: 100,
+                          width: 150,
                           height: 11,
                           color: Colors.grey.shade50,
                         ),
